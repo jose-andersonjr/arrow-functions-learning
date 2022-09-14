@@ -52,16 +52,29 @@ let precoMaiorQue50 = roupas.filter((roupa) => {
 
 console.log(precoMaiorQue50)
 
-setTimeout(() => {
-    console.log('Deu tempo! arrow')
-}, 150)
+// setTimeout(() => {
+//     console.log('Deu tempo! arrow')
+// }, 150)
 
-// A mesma função sem arrow function
-setTimeout(function() {
-    console.log('Deu tempo! normal')
-}, 150)
+// // A mesma função sem arrow function
+// setTimeout(function() {
+//     console.log('Deu tempo! normal')
+// }, 150)
 
 // Não usar uma arrow 
 let pessoa = {
-    
+    nome: 'José',
+    sayName: function (){
+        console.log(this.nome)
+        console.log(this)
+    }
 }
+
+pessoa.sayName()
+
+let btn = document.querySelector('.btn')
+console.log(btn)
+
+btn.addEventListener('click', function(){
+    this.classList.toggle('classe')
+})
